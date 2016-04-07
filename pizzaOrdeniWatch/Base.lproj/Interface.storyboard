@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="10032"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="pizzaOrdeniWatch" customModuleProvider="target">
+                    <items>
+                        <label width="136" height="49.5" alignment="left" text="¡Personaliza tu Pizza!" textAlignment="center" numberOfLines="2" id="No5-GX-1Xr"/>
+                        <button width="1" alignment="left" title="Iniciar" id="Dpu-ub-Psx">
+                            <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="pasoUnoAction" destination="AgC-eL-Hgc" id="aVK-0y-9fC"/>
+                            </connections>
+                        </button>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="380" y="260"/>
+        </scene>
+        <!--paso1-->
+        <scene sceneID="oHI-Kl-Ph8">
+            <objects>
+                <controller identifier="paso1" id="PDz-Uj-vvJ" customClass="pasoUnoInterfaceController" customModule="pizzaOrdeniWatch_Extension">
+                    <items>
+                        <label width="136" alignment="left" text="Elije el tamaño:" textAlignment="center" id="6rT-Xp-zah">
+                            <fontDescription key="font" type="system" pointSize="10"/>
+                        </label>
+                        <label width="129" height="15" alignment="left" text="Label" textAlignment="center" id="KCE-Qo-xon">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" type="system" pointSize="12"/>
+                        </label>
+                        <picker height="70" alignment="center" id="Ja2-ZC-h20">
+                            <connections>
+                                <action selector="pickerAction:" destination="PDz-Uj-vvJ" id="w5H-ys-OXl"/>
+                            </connections>
+                        </picker>
+                        <button width="136" height="36.5" alignment="left" title="Continuar" id="bf6-hG-P9c">
+                            <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" type="system" pointSize="13"/>
+                            <connections>
+                                <action selector="pasoDosAction" destination="PDz-Uj-vvJ" id="e6c-54-OQh"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="sizeLabel" destination="KCE-Qo-xon" id="CiK-Gf-thb"/>
+                        <outlet property="sizePizzaPicker" destination="Ja2-ZC-h20" id="Nps-r4-Ksc"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="633" y="260"/>
+        </scene>
+        <!--paso2-->
+        <scene sceneID="IzE-A9-BoW">
+            <objects>
+                <controller identifier="paso2" id="Sfz-vB-0Sd" customClass="pasoDosInterfaceController" customModule="pizzaOrdeniWatch_Extension">
+                    <items>
+                        <label width="136" alignment="left" text="Tipo de masa:" textAlignment="center" id="1Cn-u0-n1R">
+                            <fontDescription key="font" type="system" pointSize="10"/>
+                        </label>
+                        <label width="129" height="15" alignment="left" text="Label" textAlignment="center" id="7hL-Du-th3">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" type="system" pointSize="12"/>
+                        </label>
+                        <picker height="70" alignment="center" id="Tyw-GR-eKd">
+                            <connections>
+                                <action selector="pickerAction:" destination="Sfz-vB-0Sd" id="ghB-bd-7Gm"/>
+                            </connections>
+                        </picker>
+                        <button width="136" height="36.5" alignment="left" title="Continuar" id="3Tm-yW-dnq">
+                            <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" type="system" pointSize="13"/>
+                            <connections>
+                                <action selector="pasoTresAction" destination="Sfz-vB-0Sd" id="79Y-pm-LdP"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="masaPicker" destination="Tyw-GR-eKd" id="r60-NB-Dl3"/>
+                        <outlet property="tipoMasaLabel" destination="7hL-Du-th3" id="TH9-k2-FOx"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="854" y="260"/>
+        </scene>
+        <!--paso3-->
+        <scene sceneID="fUO-GQ-Xhk">
+            <objects>
+                <controller identifier="paso3" id="qha-DG-lNv" customClass="pasoTresInterfaceController" customModule="pizzaOrdeniWatch_Extension">
+                    <items>
+                        <label width="136" alignment="left" text="Tipo de queso:" textAlignment="center" id="trQ-gn-pFX">
+                            <fontDescription key="font" type="system" pointSize="10"/>
+                        </label>
+                        <label width="129" height="15" alignment="left" text="Label" textAlignment="center" id="xXB-SM-giV">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" type="system" pointSize="12"/>
+                        </label>
+                        <picker height="70" alignment="center" id="qv3-d3-HCZ">
+                            <connections>
+                                <action selector="quesoPickerAction:" destination="qha-DG-lNv" id="1KI-Ui-1Mx"/>
+                            </connections>
+                        </picker>
+                        <button width="136" height="36.5" alignment="left" title="Continuar" id="HeC-Z3-lgv">
+                            <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" type="system" pointSize="13"/>
+                            <connections>
+                                <action selector="pasoCuatroAction" destination="qha-DG-lNv" id="dgu-PI-gXH"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="quesoPicker" destination="qv3-d3-HCZ" id="tTM-po-AL2"/>
+                        <outlet property="tipoQuesoLabel" destination="xXB-SM-giV" id="Ph6-of-NCq"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="1083" y="260"/>
+        </scene>
+        <!--paso4-->
+        <scene sceneID="lGA-X6-jZP">
+            <objects>
+                <controller identifier="paso4" id="GT2-NO-UJz" customClass="pasoCuatroInterfaceController" customModule="pizzaOrdeniWatch_Extension">
+                    <items>
+                        <label width="136" alignment="left" text="Mas sabor" textAlignment="center" id="pF8-nl-nIX">
+                            <fontDescription key="font" type="system" pointSize="10"/>
+                        </label>
+                        <label width="136" height="13" alignment="left" text="Elige hasta 5 ingredientes" textAlignment="center" id="sCH-CS-NUz">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" type="system" pointSize="9"/>
+                        </label>
+                        <button width="136" height="36.5" alignment="left" title="Continuar" enabled="NO" id="8qg-RL-BxZ">
+                            <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" type="system" pointSize="13"/>
+                            <connections>
+                                <action selector="pasoCincoAction" destination="GT2-NO-UJz" id="qEL-L7-cYA"/>
+                            </connections>
+                        </button>
+                        <switch height="30" alignment="left" title="Jamón" id="Spj-ro-2jO">
+                            <connections>
+                                <action selector="jamonAction:" destination="GT2-NO-UJz" id="nJk-vP-U0y"/>
+                            </connections>
+                        </switch>
+                        <switch height="30" alignment="left" title="Pepperoni" id="87V-Lf-FLH">
+                            <connections>
+                                <action selector="pepperoniAction:" destination="GT2-NO-UJz" id="x1y-gV-n0c"/>
+                            </connections>
+                        </switch>
+                        <switch height="30" alignment="left" title="Cebolla" id="INl-OL-Rq1">
+                            <connections>
+                                <action selector="cebollaAction:" destination="GT2-NO-UJz" id="aw2-9x-r70"/>
+                            </connections>
+                        </switch>
+                        <switch height="30" alignment="left" title="Pimiento" id="dKr-EZ-p7k">
+                            <connections>
+                                <action selector="pepperAction:" destination="GT2-NO-UJz" id="OVr-CV-RfS"/>
+                            </connections>
+                        </switch>
+                        <switch height="30" alignment="left" title="Pavo" id="lnR-XK-2sn">
+                            <connections>
+                                <action selector="pavoAction:" destination="GT2-NO-UJz" id="pGo-4v-3zQ"/>
+                            </connections>
+                        </switch>
+                        <switch height="30" alignment="left" title="Salami" id="RCS-Ar-hcE">
+                            <connections>
+                                <action selector="salamiAction:" destination="GT2-NO-UJz" id="0XN-jA-zeJ"/>
+                            </connections>
+                        </switch>
+                    </items>
+                    <connections>
+                        <outlet property="cebollaSwitch" destination="INl-OL-Rq1" id="VN2-IT-VpM"/>
+                        <outlet property="jamonSwitch" destination="Spj-ro-2jO" id="vVr-iv-uiY"/>
+                        <outlet property="paso5Button" destination="8qg-RL-BxZ" id="hX5-iw-Dui"/>
+                        <outlet property="pavoSwitch" destination="lnR-XK-2sn" id="MKQ-YK-ceu"/>
+                        <outlet property="pepperSwitch" destination="dKr-EZ-p7k" id="DPe-LE-f53"/>
+                        <outlet property="pepperoniSwitch" destination="87V-Lf-FLH" id="hpb-ra-lSu"/>
+                        <outlet property="salamiSwitch" destination="RCS-Ar-hcE" id="o7x-XW-d0k"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="1325" y="260"/>
+        </scene>
+        <!--paso5-->
+        <scene sceneID="xou-Zb-Co6">
+            <objects>
+                <controller identifier="paso5" id="Azg-dU-7XF" customClass="pasoCincoInterfaceController" customModule="pizzaOrdeniWatch_Extension">
+                    <items>
+                        <label width="136" height="23.5" alignment="left" text="Esta es tu pizza" textAlignment="center" id="CAK-lq-iZg">
+                            <fontDescription key="font" type="system" pointSize="12"/>
+                        </label>
+                        <label width="136" height="14" alignment="left" text="Tamaño:" textAlignment="center" id="iig-6Z-V2y">
+                            <fontDescription key="font" type="system" pointSize="10"/>
+                        </label>
+                        <label width="136" height="14" alignment="left" textAlignment="center" id="7BZ-yd-vEt">
+                            <color key="textColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" type="system" pointSize="10"/>
+                        </label>
+                        <label width="136" height="14" alignment="left" text="Masa:" textAlignment="center" id="Oj4-y5-jWh">
+                            <fontDescription key="font" type="system" pointSize="10"/>
+                        </label>
+                        <label width="136" height="14" alignment="left" textAlignment="center" id="vyB-Ao-pL2">
+                            <color key="textColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" type="system" pointSize="10"/>
+                        </label>
+                        <label width="136" height="14" alignment="left" text="Queso:" textAlignment="center" id="D3Q-ix-bBu">
+                            <fontDescription key="font" type="system" pointSize="10"/>
+                        </label>
+                        <label width="134" height="14" alignment="left" textAlignment="center" id="9LN-39-U80">
+                            <color key="textColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" type="system" pointSize="10"/>
+                        </label>
+                        <label width="136" height="14" alignment="left" text="Ingrediente Extra" textAlignment="center" id="pWE-e5-IHf">
+                            <fontDescription key="font" type="system" pointSize="10"/>
+                        </label>
+                        <label width="134" height="27" alignment="left" textAlignment="center" numberOfLines="2" id="qun-qy-rdS">
+                            <color key="textColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" type="system" pointSize="10"/>
+                        </label>
+                        <group width="1" alignment="left" id="NDp-5q-J9l">
+                            <items>
+                                <button width="1" alignment="left" title="Confirmar orden" id="AQX-Gc-xdh">
+                                    <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <connections>
+                                        <action selector="pasoSeisAction" destination="Azg-dU-7XF" id="a0g-L9-v0V"/>
+                                        <segue destination="cS6-Ld-Zgt" kind="modal" id="Mpj-u9-LBQ"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="ingredientesLabel" destination="qun-qy-rdS" id="fBR-Vx-PXm"/>
+                        <outlet property="masaLabel" destination="vyB-Ao-pL2" id="wmb-Ag-8JZ"/>
+                        <outlet property="quesoLabel" destination="9LN-39-U80" id="voG-M3-USe"/>
+                        <outlet property="sizeLabel" destination="7BZ-yd-vEt" id="jjO-J6-pSN"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="1562" y="295.5"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="xYj-AY-sIv">
+            <objects>
+                <controller id="cS6-Ld-Zgt">
+                    <items>
+                        <label width="136" height="171.5" alignment="left" text="¡Gracias por tu compra!" textAlignment="center" numberOfLines="3" id="scA-x6-kfV">
+                            <fontDescription key="font" type="system" pointSize="29"/>
+                        </label>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="1808" y="296"/>
+        </scene>
+    </scenes>
+    <color key="tintColor" red="0.099411718547344208" green="0.027807677164673805" blue="0.04370589554309845" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+</document>
